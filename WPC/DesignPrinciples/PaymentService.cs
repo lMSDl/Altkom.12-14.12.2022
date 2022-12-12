@@ -22,7 +22,7 @@ namespace WPC.DesignPrinciples
 
         public bool Charge(int accountId, float amount)
         {
-            PaymentAccount? account = FindAccount(accountId);
+            PaymentAccount? account = FindById(accountId);
             if (account == null)
                 return false;
 
@@ -38,7 +38,7 @@ namespace WPC.DesignPrinciples
             return account.Income - account.Outcome + account.AllowedDebit < amount;
         }
 
-        private PaymentAccount? FindAccount(int accountId)
+        private PaymentAccount? FindById(int accountId)
         {
             return PaymentAcocunts.SingleOrDefault(x => x.Id == accountId);
         }
