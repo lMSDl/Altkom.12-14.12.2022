@@ -10,16 +10,6 @@ namespace WPC.DesignPrinciples
     {
         private ICollection<PaymentAccount> PaymentAcocunts { get; } = new List<PaymentAccount> { new PaymentAccount(1), new PaymentAccount(2), new PaymentAccount(3), new PaymentAccount(4), new PaymentAccount(5) };
 
-        public bool DeletePaymentAccount(PaymentAccount paymentAccount)
-        {
-            return PaymentAcocunts.Remove(paymentAccount);
-        }
-
-        public PaymentAccount FindByAllowedDebit(float allowedDebit)
-        {
-            return PaymentAcocunts.SingleOrDefault(x => x.AllowedDebit == allowedDebit);
-        }
-
         public bool Charge(int accountId, float amount)
         {
             PaymentAccount? account = FindById(accountId);

@@ -18,10 +18,5 @@ namespace WPC.DesignPrinciples
         public float Income { get; set; }
         public float Outcome { get; set; }
         public float AllowedDebit { get; set; }
-
-        public bool HasDebit()
-        {
-            return Income - Outcome < 0;
-        }
     }
 }
