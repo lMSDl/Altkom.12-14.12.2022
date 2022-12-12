@@ -13,19 +13,7 @@ namespace WPC.DesignPrinciples
         public bool Charge(int accountId, float amount)
         {
             PaymentAccount? account = FindById(accountId);
-            if (account == null)
-                return false;
-
-            if (ValidateAmonut(amount, account))
-                return false;
-
-            account.Outcome += amount;
-            return true;
-        }
-
-        private bool ValidateAmonut(float amount, PaymentAccount account)
-        {
-            return GetBalance(account.Id) + account.AllowedDebit < amount;
+            return account?.Charge(amount) ?? false;
         }
 
         private PaymentAccount? FindById(int accountId)
@@ -35,16 +23,8 @@ namespace WPC.DesignPrinciples
 
         public void Fund(int accountId, float amount)
         {
-            var customer = FindById(accountId);
-            if (customer == null)
-                return;
-            customer.Income += amount;
-        }
-
-        public float? GetBalance(int accountId)
-        {
-            var customer = FindById(accountId);
-            return customer?.Income - customer?.Outcome;
+            var account = FindById(accountId);
+            account?.Fund(amount);
         }
     }
 }
