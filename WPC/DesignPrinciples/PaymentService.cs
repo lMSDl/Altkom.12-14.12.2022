@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,12 +11,16 @@ namespace WPC.DesignPrinciples
     {
         public bool Charge(Customer customer, float amount)
         {
-            return customer.Account?.Charge(amount) ?? false;
+            return Charge(customer.Account, amount);
+        }
+        public bool Charge(PaymentAccount account, float amount)
+        {
+            return account?.Charge(amount) ?? false;
         }
 
-        public void Fund(Customer customer, float amount)
+        public void Fund(PaymentAccount account, float amount)
         {
-            customer.Account?.Fund(amount);
+            account?.Fund(amount);
         }
     }
 }
