@@ -48,6 +48,22 @@ namespace WPC.DesignPatterns.Creational.Builder
             vehicle = new Vehicle() { Doors = 4, EnginePower = 100, Seats = 5, Wheels = 4, TrunkCapacity = 100 };
             Console.WriteLine(vehicle);
 
+
+
+            vehicle = new VehicleBuilderFacade()
+                        .Parts
+                            .SetWheels(4)
+                            .SetSeats(5)
+                            .SetDoors(4)
+                            .SetTrunkCapacity(500)
+                        .Info
+                            .SetManufacturer("Altkom")
+                            .SetProductionDateTime(DateTime.Now)
+                        .Parts
+                            .SetEnginePower(100)
+                        .Build();
+            Console.WriteLine(vehicle);
+
         }
     }
 }

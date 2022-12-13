@@ -1,8 +1,14 @@
 ﻿namespace WPC.DesignPatterns.Creational.Builder
 {
-    public class VehicleBuilder
+    public class VehicleBuilder : VehicleBuilderFacade
     {
-        private Vehicle Vehicle { get; set; } = new Vehicle();
+        public VehicleBuilder()
+        {
+        }
+
+        internal VehicleBuilder(Vehicle vehicle) : base(vehicle)
+        {
+        }
 
         public VehicleBuilder SetWheels(int value)
         {
@@ -30,9 +36,5 @@
             return this;
         }
 
-        public Vehicle Build()
-        {
-            return (Vehicle)Vehicle.Clone();
-        }
     }
 }
