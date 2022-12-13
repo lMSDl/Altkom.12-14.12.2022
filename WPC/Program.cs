@@ -1,5 +1,4 @@
-﻿using WPC.DesignPatterns.Stuctural.Adapter.I;
-
+﻿using WPC.DesignPatterns.Stuctural.Bridge.II;
 
 Client.Execute();
 
