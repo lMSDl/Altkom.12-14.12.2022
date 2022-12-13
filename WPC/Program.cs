@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Stuctural.Flyweight;
+﻿using WPC.DesignPatterns.Stuctural.Proxy;
 
 Client.Execute();
 
