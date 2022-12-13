@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Creational.Prototype;
+﻿using WPC.DesignPatterns.Creational.Builder;
 using WPC.SOLID.L;
 
 

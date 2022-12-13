@@ -20,23 +20,30 @@ namespace WPC.DesignPatterns.Creational.Builder
             vehicleBuilder.SetTrunkCapacity(500);
             vehicleBuilder.SetEnginePower(100);*/
 
-            /*var vehicleBuilder = new VehicleBuilder()
+            var vehicleBuilder = new VehicleBuilder()
             .SetWheels(4)
             .SetSeats(5)
             .SetDoors(4)
             .SetTrunkCapacity(500)
             .SetEnginePower(100);
 
-            vehicle = vehicleBuilder.Build();*/
+            vehicle = vehicleBuilder.Build();
 
-            vehicle = new VehicleBuilder()
+            /*vehicle = new VehicleBuilder()
             .SetWheels(4)
             .SetSeats(5)
             .SetDoors(4)
             .SetTrunkCapacity(500)
             .SetEnginePower(100)
-                .Build();
+                .Build();*/
+
             Console.WriteLine(vehicle);
+
+            vehicleBuilder.SetWheels(500);
+            Console.WriteLine(vehicle);
+            vehicle = vehicleBuilder.Build();   
+            Console.WriteLine(vehicle);
+
 
             vehicle = new Vehicle() { Doors = 4, EnginePower = 100, Seats = 5, Wheels = 4, TrunkCapacity = 100 };
             Console.WriteLine(vehicle);

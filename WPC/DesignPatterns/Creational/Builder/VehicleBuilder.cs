@@ -32,7 +32,7 @@
 
         public Vehicle Build()
         {
-            return Vehicle;
+            return (Vehicle)Vehicle.Clone();
         }
     }
 }

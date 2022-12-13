@@ -17,13 +17,23 @@ namespace WPC.DesignPatterns.Creational.Prototype
 
         public ICollection<Person> Children { get; set; }
 
+
         public object Clone()
+        {
+            var clone = (Person)MemberwiseClone();
+            clone.Address = (Address)Address.Clone();
+
+            clone.Children = Children?.ToList(); //new List<Person>(Children);
+            return clone;
+        }
+
+        public object DeepClone()
         {
             var clone = (Person) MemberwiseClone();
             clone.Address = (Address)Address.Clone();
 
-            clone.Parent = (Person)Parent?.Clone();
-            clone.Children = Children?.Select(x => (Person)x.Clone()).ToList();
+            clone.Parent = (Person)Parent?.DeepClone();
+            clone.Children = Children?.Select(x => (Person)x.DeepClone()).ToList();
             return clone;
         }
 
