@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Stuctural.Composite;
+﻿using WPC.DesignPatterns.Stuctural.Decorator;
 
 Client.Execute();
 
