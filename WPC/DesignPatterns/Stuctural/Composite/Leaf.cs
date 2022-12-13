@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPC.DesignPatterns.Stuctural.Composite
 {
-    public abstract class Leaf : IComponent
+    public abstract class Leaf : IComponent, IProduct
     {
         public string Name => GetType().Name;
         public float Price { get; set; }

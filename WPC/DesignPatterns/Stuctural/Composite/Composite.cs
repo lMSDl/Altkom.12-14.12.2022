@@ -12,7 +12,7 @@ namespace WPC.DesignPatterns.Stuctural.Composite
 
         public ICollection<IComponent> Components { get; set; } = new List<IComponent>();
 
-        public float GetValue()
+        public virtual float GetValue()
         {
             var value = Components.Sum(x => x.GetValue());
             Console.WriteLine($"Wartość {Name} to {value}");

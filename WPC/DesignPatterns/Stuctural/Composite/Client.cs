@@ -16,7 +16,7 @@ namespace WPC.DesignPatterns.Stuctural.Composite
             var shelf1 = new Shelf();
             var shelf2 = new Shelf();
             
-            var box1 = new Box();
+            var box1 = new Box(50);
             var box2 = new Box();
             var box3 = new Box();
             var box4 = new Box();
