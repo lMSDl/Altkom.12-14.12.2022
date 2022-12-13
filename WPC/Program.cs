@@ -1,5 +1,4 @@
-﻿using WPC.DesignPatterns.Creational.ObjectPool;
-using WPC.SOLID.L;
+﻿using WPC.DesignPatterns.Stuctural.Adapter.I;
 
 
 Client.Execute();
@@ -7,12 +6,12 @@ Client.Execute();
 
 
 
-void ShowArea(Rectangle rectangle)
+void ShowArea(WPC.SOLID.L.Rectangle rectangle)
 {
     Console.WriteLine(rectangle.Area);
 }
 
-static void SetupRectangle(Rectangle rectangle, int a, int b)
+static void SetupRectangle(WPC.SOLID.L.Rectangle rectangle, int a, int b)
 {
     rectangle.A = a;
     rectangle.B = b;
@@ -20,7 +19,7 @@ static void SetupRectangle(Rectangle rectangle, int a, int b)
 
 void LSP()
 {
-    var rectangle = new Square();
+    var rectangle = new WPC.SOLID.L.Square();
     int a = 3;
     int b = 5;
     SetupRectangle(rectangle, a, b);
