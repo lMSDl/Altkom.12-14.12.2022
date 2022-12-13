@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Stuctural.Facade.I;
+﻿using WPC.DesignPatterns.Stuctural.Flyweight;
 
 Client.Execute();
 
