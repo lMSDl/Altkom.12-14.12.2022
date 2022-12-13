@@ -19,7 +19,6 @@ namespace WPC.DesignPatterns.Stuctural.Decorator
                 INotification notification = new Notification();
                 if (text.Length <= 16)
                     notification = new SmsNotification(notification);
-
                 if(Random())
                     notification = new EmailNotification(notification);
 
