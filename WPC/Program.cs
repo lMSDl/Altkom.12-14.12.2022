@@ -1,5 +1,4 @@
-﻿using WPC.DesignPatterns.Behavioral.TemplateMethod;
-
+﻿using WPC.DesignPatterns.Behavioral.Visitor.II;
 
 Client.Execute();
 
