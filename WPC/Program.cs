@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Behavioral.Command;
+﻿using WPC.DesignPatterns.Behavioral.Iterator;
 
 Client.Execute();
 
