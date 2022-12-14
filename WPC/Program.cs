@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Behavioral.Iterator;
+﻿using WPC.DesignPatterns.Behavioral.Mediator;
 
 Client.Execute();
 
