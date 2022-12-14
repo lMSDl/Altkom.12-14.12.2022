@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Behavioral.State;
+﻿using WPC.DesignPatterns.Behavioral.Strategy;
 
 Client.Execute();
 
