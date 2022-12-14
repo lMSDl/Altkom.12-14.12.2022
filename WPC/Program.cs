@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Behavioral.ChainOfResponsibility.II;
+﻿using WPC.DesignPatterns.Behavioral.Command;
 
 Client.Execute();
 
