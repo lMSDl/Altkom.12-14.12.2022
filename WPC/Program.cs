@@ -1,4 +1,5 @@
-﻿using WPC.DesignPatterns.Behavioral.Strategy;
+﻿using WPC.DesignPatterns.Behavioral.TemplateMethod;
+
 
 Client.Execute();
 
