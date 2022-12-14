@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Stuctural.Proxy;
+﻿using WPC.DesignPatterns.Behavioral.ChainOfResponsibility.II;
 
 Client.Execute();
 
