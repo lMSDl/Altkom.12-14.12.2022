@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Behavioral.Visitor.II;
+﻿using WPC.DesignPatterns.Behavioral.NullObject;
 
 Client.Execute();
 
