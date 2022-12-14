@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Behavioral.Memento;
+﻿using WPC.DesignPatterns.Behavioral.Observer;
 
 Client.Execute();
 
